@@ -3,25 +3,74 @@
 // Заголовочный файл с объявлением структуры данных
 
 namespace itis {
+  // Узел BTree
+  class BTreeNode {
+    int *keys; 
+    int t;
+    BTreeNode **C;
+    int n;
+    bool leaf;
 
-  // Tip 1: объявите здесь необходимые структуры, функции, константы и прочее
-
-  // Пример: объявление константы времени компиляции в заголовочном файле
-  inline constexpr auto kStringConstant = "Hello, stranger!";
-
-  // Пример: объявление структуры с полями и методами
-  struct MyStructure {
    public:
-    int size_{0};
-    int capacity_{0};
-    int* data_{nullptr};
+    BTreeNode(int _t, bool _leaf);
 
-    // Tip 2: На начальном этапе разработки структуры данных можете определения методов задавать в
-    // заголовочном файле, как только работа будет завершена, можно будет оставить здесь только объявления.
+    void traverse();
 
-    int size() const {
-      return size_;
+    BTreeNode *search(int k);
+
+    int findKey(int k);
+
+    void insertNonFull(int k);
+
+    void splitChild(int i, BTreeNode *y);
+
+    void remove(int k);
+
+    void removeFromLeaf(int idx);
+
+    void removeFromNonLeaf(int idx);
+
+    int getPred(int idx);
+    
+    int getSucc(int idx);
+
+    void fill(int idx);
+
+    void borrowFromPrev(int idx);
+
+    void borrowFromNext(int idx);
+
+    void merge(int idx);
+
+    friend class BTree;
+  };
+
+  class BTree
+  {
+    BTreeNode *root;
+    int t;
+   public:
+
+    BTree(int _t)
+    {
+      root = NULL;
+      t = _t;
     }
+
+    void traverse()
+    {
+      if (root != NULL) root->traverse();
+    }
+
+    BTreeNode* search(int k)
+    {
+      return (root == NULL)? NULL : root->search(k);
+    }
+
+    void insert(int k);
+
+    void remove(int k);
+
   };
 
 }  // namespace itis

@@ -78,16 +78,16 @@
 формате [Text file(TXT)](https://en.wikipedia.org/wiki/Text_file):
 
 - Процесс генерации тестовых данных:
-  - откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/)
-    ![picture](img/path_to_project2.png)
-  - определите путь до проекта
-    ![picture](img/path_to_project.png)
-  - пропишите максимальное значение элементов(по желанию)
-    ![picture](img/max_rand.png)
-  - запустите **generate_csv_dataset.cpp**
-    ![picture](img/run_generater.png)
-  - подождите пока сгенерируются все данные
-    ![picture](img/finish_generation.png)
+  - откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/)  
+  ![picture](img/path_to_project2.png)
+  - определите путь до проекта  
+  ![picture](img/path_to_project.png)
+  - пропишите максимальное значение элементов(по желанию)  
+  ![picture](img/max_rand.png)
+  - запустите **generate_csv_dataset.cpp**  
+  ![picture](img/run_generater.png)
+  - подождите пока сгенерируются все данные  
+  ![picture](img/finish_generation.png)
 
 Тестовые данные представлены в TXT формате (см.
 [`dataset/data/dataset-example.txt`](dataset/data/dataset-example.txt)):

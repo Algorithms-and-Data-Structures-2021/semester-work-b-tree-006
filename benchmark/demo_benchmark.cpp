@@ -11,13 +11,13 @@ using namespace std;
 using namespace itis;
 
 // Определите путь до проекта
-const string path_to_project = "C:\\Users\\4aspe\\Desktop\\working\\semester-work-b-tree-006";
+const string path_to_project = "C:\\Users\\username\\acd-projects\\semester-work-b-tree-006";
 
 // абсолютный путь до набора данных и папки проекта
 static const auto kDatasetPathAdd = path_to_project + "\\dataset\\data\\add\\";
 static const auto kDatasetPathSearch = path_to_project + "\\dataset\\data\\search\\";
 static const auto kDatasetPathRemove = path_to_project + "\\dataset\\data\\remove\\";
-static const int kSizeDataset = 100;
+static const int kSizeDataset = 5000;
 
 int main() {
   // работа с набором данных

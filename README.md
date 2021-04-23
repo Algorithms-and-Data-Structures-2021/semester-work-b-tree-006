@@ -63,84 +63,63 @@ _Постарайтесь написать инструкцию так, чтоб
 ### Пример (Windows)
 
 #### Сборка проекта
-
-_Опишите процесс сборки проекта._
-
-Склонируйте проект к себе на устройство через [Git for Windows](https://gitforwindows.org/) (либо используйте
-возможности IDE):
-
-```shell
-git clone https://github.com/Algorithms-and-Data-Structures-2021/semester-work-b-tree-006.git
-```
-
-Для ручной сборки проекта в терминале введите:
-
-```shell
-# переход в папку с проектом
-cd C:\Users\username\asd-projects\semester-b-tree-006
-
-# создание папки для файлов сборки (чтобы не засорять папку с проектом) 
-mkdir -p build && cd build 
-
-# сборка проекта
-cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo && cmake --config RelWithDebInfo --build . 
-```
-
+- 1 способ:
+  - Склонируйте проект к себе на устройство через [Git for Windows](https://gitforwindows.org/) (либо используйте возможности IDE):
+  ```shell
+  git clone https://github.com/Algorithms-and-Data-Structures-2021/semester-work-b-tree-006.git
+  ```
+- 2 способ:
+  - Откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/), используя URL https://github.com/Algorithms-and-Data-Structures-2021/semester-work-b-tree-006.git
+  
 #### Генерация тестовых данных
 
-_Опишите формат хранения (JSON, XML, CSV, YAML и т.д.) и процесс генерации тестовых данных._
-
-_Разрешается использовать собственный формат хранения данных._
-
 Генерация тестового набора данных в
-формате [comma-seperated values (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values):
+формате [Text file(TXT)](https://en.wikipedia.org/wiki/Text_file):
 
-```shell
-# переход в папку генерации набора данных
-cd dataset
+- Процесс генерации тестовых данных:
+  - откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/)
+  - определите путь до проекта
+  - пропишите максимальное значение элементов(по желанию)
+  - запустите **generate_csv_dataset.cpp**
+  - подождите пока сгенерируются все данные
 
-# запуск Python-скрипта
-python generate_csv_bench_dataset.py --samples 1000 <output> [args ...]
-```
+Тестовые данные представлены в TXT формате (см.
+[`dataset/data/dataset-example.txt`](dataset/data/dataset-example.txt)):
 
-- `--samples` - количество генерируемых элементов;
-- `<output>` - выходной файл и т.д.
-
-Тестовые данные представлены в CSV формате (см.
-[`dataset/data/dataset-example.csv`](dataset/data/dataset-example.csv)):
-
-```csv
-id, full_name
-0, "Ramil Safin"
-1, "Bulat Abbyasov"
+```txt
+654
+44
+78
+132
+256
 ...
 ```
 
-**Примечание**. Для удобства запуска контрольных тестов рекомендуется организовывать данные в директориях, например:
+**Примечание**. Данные для удобства запуска контрольных тестов организовываются так:
 
 ```shell
 dataset/data/
   add/
     01/
-      100.csv
+      100.txt
       ...
-      5000000.csv
+      5000000.txt
     02/ ...
     03/ ...
     ...
     10/ ...
   search/
     01/
-      100.csv
+      100.txt
       ...
-      5000000.csv
+      5000000.txt
     ...
     10/ ...
   ...
 ```
 
 По названию директории `/dataset/data/add` можно понять, что здесь хранятся наборы данных для контрольных тестов по
-**добавлению** элементов в структуру данных. Названия файлов `100.csv`. `5000000.csv` и т.д. хранят информацию о размере набора данных (т.е. количество элементов). 
+**добавлению** элементов в структуру данных. Названия файлов `100.txt`. `5000000.txt` и т.д. хранят информацию о размере набора данных (т.е. количество элементов). 
 
 #### Контрольные тесты (benchmarks)
 

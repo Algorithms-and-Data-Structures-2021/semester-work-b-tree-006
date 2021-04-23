@@ -3,10 +3,14 @@
 #include "data_structure.hpp"
 
 using namespace std;
+using namespace itis;
 
-int main(int argc, char *argv[]) {
-  for (int index = 0; index < argc; index++) {
-    cout << index << ": " << argv[index] << endl;
+int main() {
+  BTree tree(50);
+  for (int i = 1; i <= 10; i++) {
+    tree.insert(i);
   }
-  return 0;
+  tree.remove(5);
+  tree.traverse();
+  cout << "\n" <<bool(tree.search(5));
 }

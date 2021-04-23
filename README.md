@@ -79,7 +79,6 @@
 
 - Процесс генерации тестовых данных:
   - откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/)  
-  ![picture](img/path_to_project2.png)
   - определите путь до проекта  
   ![picture](img/path_to_project.png)
   - пропишите максимальное значение элементов(по желанию)  

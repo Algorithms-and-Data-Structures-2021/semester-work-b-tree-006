@@ -69,8 +69,10 @@ _Постарайтесь написать инструкцию так, чтоб
   git clone https://github.com/Algorithms-and-Data-Structures-2021/semester-work-b-tree-006.git
   ```
 - 2 способ:
-  - Откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/), используя URL https://github.com/Algorithms-and-Data-Structures-2021/semester-work-b-tree-006.git
-  
+  - Откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/), используя URL:
+  ```shell
+  https://github.com/Algorithms-and-Data-Structures-2021/semester-work-b-tree-006.git
+  ```
 #### Генерация тестовых данных
 
 Генерация тестового набора данных в

@@ -17,6 +17,8 @@ const string path_to_project = "C:\\Users\\username\\acd-projects\\semester-work
 static const auto kDatasetPathAdd = path_to_project + "\\dataset\\data\\add\\";
 static const auto kDatasetPathSearch = path_to_project + "\\dataset\\data\\search\\";
 static const auto kDatasetPathRemove = path_to_project + "\\dataset\\data\\remove\\";
+
+//100, 500, 1000, 10000, 50000, 250000, 500000, 1000000, 2500000, 5000000
 static const int kSizeDataset = 5000;
 
 int main() {

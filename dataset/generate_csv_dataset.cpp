@@ -1,58 +1,87 @@
-#include <fstream>      // ifstream, ofstream
-#include <iostream>     // cout
-#include <sstream>      // stringstream
-#include <string>       // string, getline
-#include <string_view>  // string_view
-#include <random>       // mt19937_64, random_device
-#include <chrono>       // system_clock
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+
 
 using namespace std;
 
-// абсолютный путь до набора данных
-static constexpr auto kDatasetPath = string_view{PROJECT_DATASET_DIR};
 
-int main(int argc, char** argv) {
+// Определите путь до проекта
+const string path_to_project = "C:\\Users\\4aspe\\Desktop\\working\\semester-work-b-tree-006";
 
-  // Tip 1: можете передать путь до входного/выходного файла в качестве аргумента
-  for (int index = 0; index < argc; index++) {
-    cout << "Arg: " << argv[index] << '\n';
-  }
+// Максимальное значение элементов генерации
+const int max_rand = 100;
 
-  const auto path = string(kDatasetPath);  // конвертация string_view в string
-  cout << "Dataset path: " << path << endl;
+// Наборы данных(кол-во элементов в каждом наборе)
+int sizes_dataset[10] = {100, 500, 1000, 10000, 50000, 250000,
+                         500000, 1000000, 2500000, 5000000};
 
-  // Пример: чтение набора данных
-  auto input_stream = ifstream(path + "/dataset-example.csv");
+int main() {
 
-  if (input_stream) {
-    int line_number = 0;
+  for (int size_dataset : sizes_dataset) {
+    for (int i = 1; i <= 10; i++) {
 
-    // построчное чтение
-    for (string line; getline(input_stream, line); /* ... */) {
-      auto ss = stringstream(line);  // оборачиваем строку в объект "поток"
+      srand(static_cast<unsigned int>(time(0)));
 
-      for (string token; getline(ss, token, ','); /* ... */) {
-        cout << "Token: [" << token << "] at line " << line_number << '\n';
+      string PATH = path_to_project + "\\dataset\\data\\add\\0" + to_string(i) + "\\";
+
+      string filename = to_string(size_dataset) + ".txt";
+
+      ofstream fout(PATH + filename);
+
+      if (!fout.is_open()) {
+        cout << "open error" << endl;
+        return -1;
       }
 
-      cout << line << '\n';
-      line_number++;
+      for (int j = 0; j < size_dataset; j++) {
+        fout << (rand() * 30519) % max_rand + 1 << endl;
+      }
+
+      fout.close();
+
+
+      srand(static_cast<unsigned int>(time(0)));
+
+      string PATH1 = path_to_project + "\\dataset\\data\\search\\0" + to_string(i) + "\\";
+
+      string filename1 = to_string(size_dataset) + ".txt";
+
+      ofstream fout1(PATH1 + filename1);
+
+      if (!fout1.is_open()) {
+        cout << "open error" << endl;
+        return -1;
+      }
+
+      for (int k = 0; k < size_dataset; k++) {
+        fout1 << (rand() * 30519) % max_rand + 1 << endl;
+      }
+
+      fout1.close();
+
+      srand(static_cast<unsigned int>(time(0)));
+
+      string PATH2 = path_to_project + "\\dataset\\data\\remove\\0" + to_string(i) + "\\";
+
+      string filename2 = to_string(size_dataset) + ".txt";
+
+      ofstream fout2(PATH2 + filename2);
+
+      if (!fout2.is_open()) {
+        cout << "open error" << endl;
+        return -1;
+      }
+
+      for (int k1 = 0; k1 < size_dataset; k1++) {
+        fout2 << (rand() * 30519) % max_rand + 1 << endl;
+      }
+
+      fout2.close();
     }
+    cout << size_dataset << " elements generated" << "\n";
   }
-
-  // Пример: генерация набора данных
-  auto output_stream = ofstream(path + "/dataset-generated.csv", ios::ios_base::app);
-
-  const auto seed = chrono::system_clock::now().time_since_epoch().count();
-  auto engine = mt19937(seed);  // без seed`а генератор будет выдавать одни и те же значения
-  auto dist = uniform_int_distribution(0, 10);  // равновероятное распределение генерируемых чисел
-
-  if (output_stream) {
-    for (int counter = 0; counter < 10; counter++) {
-      output_stream << dist(engine) << ',';
-    }
-    output_stream << dist(engine) << '\n';
-  }
-
   return 0;
 }

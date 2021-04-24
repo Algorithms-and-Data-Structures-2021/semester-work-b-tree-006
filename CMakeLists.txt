@@ -33,15 +33,15 @@ target_compile_definitions(project_paths INTERFACE
 # === Библиотека со структурой данных (target) ===
 # Это самое главное, что вы должны реализовать в рамках семестрового проекта.
 
-add_library(${PROJECT_NAME} STATIC
+add_library(semester_work_b-tree-006 STATIC
         src/data_structure.cpp
         include/data_structure.hpp)
 
 # включить предупреждения компилятора для библиотеки (линковка)
-target_link_libraries(${PROJECT_NAME} PRIVATE project_warnings)
+target_link_libraries(semester_work_b-tree-006 PRIVATE project_warnings)
 
 # обозначить директорию с заголовочными файлами для библиотеки
-target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_include_directories(semester_work_b-tree-006 PUBLIC include)
 
 # === Подключение подмодулей проекта ===
 
@@ -50,5 +50,5 @@ add_subdirectory(examples)
 add_subdirectory(benchmark)
 
 # === main (target) ===
-add_executable(main main.cpp)
-target_link_libraries(main PRIVATE project_warnings ${PROJECT_NAME})
+add_executable(main main.cpp examples/example.cpp)
+target_link_libraries(main PRIVATE project_warnings semester_work_b-tree-006)

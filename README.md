@@ -44,6 +44,9 @@
 - [`examples`](examples) - примеры работы со структурой данных;
 - [`dataset`](dataset) - наборы данных для запуска контрольных тестов и их генерация;
 
+## Примечание. 
+С презентацией, видео-презентацией, отчетом, готовым набором тестовых данных, графиками производительности можете ознакомиться, перейдя по ссылке на [Google Drive](https://drive.google.com/drive/folders/18TU3Hrlns-WvWv0du2pRgy5E4uMpS2wx). 
+
 ## Требования (Prerequisites)
 
 Рекомендуемые требования:
@@ -60,7 +63,7 @@
 
 #### Сборка проекта
 - 1 способ:
-  - Склонируйте проект к себе на устройство через [Git for Windows](https://gitforwindows.org/) (либо используйте возможности IDE):
+  - Склонируйте проект к себе на устройство через [Git for Windows](https://gitforwindows.org/):
   ```shell
   git clone https://github.com/Algorithms-and-Data-Structures-2021/semester-work-b-tree-006.git
   ```

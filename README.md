@@ -139,9 +139,9 @@ dataset/data/
   ![picture](img/open_benchmark.png)
   - определите путь до проекта  
   ![picture](img/path_to_project.png) 
-  - Определите размер данных, которые тестируете  
+  - определите размер данных, которые тестируете  
   ![picture](img/size_dataset.png) 
-  - Можете изменить степень дерева    
+  - по желанию можете изменить степень дерева    
   ![picture](img/pow_btree.png) 
   - запустите **demo_benchmark.cpp**  
   ![picture](img/run_demo_benchmark.png)

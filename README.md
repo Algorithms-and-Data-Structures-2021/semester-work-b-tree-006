@@ -133,8 +133,8 @@ dataset/data/
 
 - Процесс измерения по времени тестовых данных:
   - Для запуска контрольных тестов необходимо предварительно сгенерировать или скачать готовый набор тестовых данных по [ссылке](https://drive.google.com/drive/folders/1dg58_pO2eDRUz4R2VUWSD7QNzPa5hE_l).
-  - при скачивании набора замените папку dataset новым скаченным dataset
   - откройте проект в [CLion](https://www.jetbrains.com/ru-ru/clion/)  
+  - при скачивании набора замените папку dataset новым скаченным dataset  
   - перейдите в benchmark и откройте **demo_benchmark.cpp**  
   ![picture](img/open_benchmark.png)
   - определите путь до проекта  

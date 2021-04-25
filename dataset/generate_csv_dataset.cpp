@@ -37,16 +37,17 @@ int main() {
         cout << "open error" << endl;
         return -1;
       }
-
+      // заполняем рандомными значениями 
       for (int j = 0; j < size_dataset; j++) {
         fout << (rand() * rand()) % max_rand + 1 << endl;
       }
-
+      
       fout.close();
       
+      // пауза, для того чтобы не генерировались одинаковые числа
       this_thread::sleep_for(1000ms);
 
-
+      // далее те же самые действия выполняется для операции поиска и удаления
       srand(static_cast<unsigned int>(time(0)));
 
       string PATH1 = path_to_project + "\\dataset\\data\\search\\0" + to_string(i) + "\\";

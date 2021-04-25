@@ -3,6 +3,7 @@
 #include <string>
 #include <ctime>
 #include <cstdlib>
+#include <windows.h> // Для секундной паузы, чтобы seed в rand() различался
 
 
 using namespace std;
@@ -41,6 +42,8 @@ int main() {
       }
 
       fout.close();
+      
+      Sleep(1000);
 
 
       srand(static_cast<unsigned int>(time(0)));
@@ -61,6 +64,9 @@ int main() {
       }
 
       fout1.close();
+      
+      Sleep(1000);
+      
 
       srand(static_cast<unsigned int>(time(0)));
 
@@ -80,6 +86,8 @@ int main() {
       }
 
       fout2.close();
+      
+      Sleep(1000);
     }
     cout << size_dataset << " elements generated" << "\n";
   }

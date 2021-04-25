@@ -23,9 +23,10 @@ int main() {
 
   for (int size_dataset : sizes_dataset) {
     for (int i = 1; i <= 10; i++) {
-
+      
+      // функция при помощи которой при каждом выполнении программы генерируются случайные числа      
       srand(static_cast<unsigned int>(time(0)));
-
+      
       string PATH = path_to_project + "\\dataset\\data\\add\\0" + to_string(i) + "\\";
 
       string filename = to_string(size_dataset) + ".txt";
@@ -38,7 +39,7 @@ int main() {
       }
 
       for (int j = 0; j < size_dataset; j++) {
-        fout << (rand() * 30519) % max_rand + 1 << endl;
+        fout << (rand() * rand()) % max_rand + 1 << endl;
       }
 
       fout.close();
@@ -56,11 +57,11 @@ int main() {
 
       if (!fout1.is_open()) {
         cout << "open error" << endl;
-        return -1;
+        return -1; // если файл не открылся, выводим ошибку
       }
 
       for (int k = 0; k < size_dataset; k++) {
-        fout1 << (rand() * 30519) % max_rand + 1 << endl;
+        fout1 << (rand() * rand()) % max_rand + 1 << endl;
       }
 
       fout1.close();
@@ -82,7 +83,7 @@ int main() {
       }
 
       for (int k1 = 0; k1 < size_dataset; k1++) {
-        fout2 << (rand() * 30519) % max_rand + 1 << endl;
+        fout2 << (rand() * rand()) % max_rand + 1 << endl;
       }
 
       fout2.close();

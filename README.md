@@ -52,7 +52,7 @@
 1. С++ компилятор c поддержкой стандарта C++17 (например, _GNU GCC 8.1.x_ и выше).
 2. Система автоматизации сборки _CMake_ (версия _3.12.x_ и выше).
 3. Clion или Visual Microsoft Visual Studio.
-4. Рекомендуемый объем оперативной памяти - не менее 4 ГБ.
+4. Рекомендуемый объем оперативной памяти - не менее 8 ГБ.
 5. Свободное дисковое пространство объемом ~ 3 ГБ (набор данных для контрольных тестов).
 
 ## Сборка и запуск
@@ -164,9 +164,9 @@ dataset/data/
 
 ## Источники
 
-1. YouTube канал “NeuralNine”, видео https://youtu.be/hMGhs63sCO0.  
+1. YouTube канал “NeuralNine” - [видео](https://youtu.be/hMGhs63sCO0).  
 
-2. YouTube канал “Volodya Mozhenkov”, видео https://youtu.be/WXXetwePSRk.  
+2. YouTube канал “Volodya Mozhenkov” - [видео](https://youtu.be/WXXetwePSRk).  
 
 3. Статьи с сайта habr, в основном https://habr.com/ru/post/114154/.
 

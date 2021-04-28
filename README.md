@@ -168,5 +168,4 @@ dataset/data/
 
 2. YouTube канал “Volodya Mozhenkov” - [видео](https://youtu.be/WXXetwePSRk).  
 
-3. Статьи с сайта habr, в основном https://habr.com/ru/post/114154/.
-
+3. Статьи с сайта habr, в основном [статья про B-дерево](https://habr.com/ru/post/114154/).

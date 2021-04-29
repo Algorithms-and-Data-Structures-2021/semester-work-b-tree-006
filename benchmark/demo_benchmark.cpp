@@ -5,13 +5,13 @@
 #include <chrono>       // high_resolution_clock, duration_cast, nanoseconds
 
 // подключаем вашу структуру данных
-#include "data_structure.hpp"
+#include "btree.hpp"
 
 using namespace std;
 using namespace itis;
 
 // Определите путь до проекта
-const string path_to_project = "C:\\Users\\username\\acd-projects\\semester-work-b-tree-006";
+const string path_to_project = "C:\\Users\\4aspe\\Desktop\\C++\\semester-work-b-tree-006";
 
 // абсолютный путь до набора данных и папки проекта
 static const auto kDatasetPathAdd = path_to_project + "\\dataset\\data\\add\\";

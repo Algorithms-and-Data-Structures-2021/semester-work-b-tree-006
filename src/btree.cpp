@@ -1,5 +1,5 @@
 #include<iostream>
-#include "data_structure.hpp"
+#include "btree.hpp"
 
 // файл с определениями
 
@@ -300,7 +300,7 @@ namespace itis {
   void BTree::insert(int k)
   {
     // Если дерево пусто
-    if (root == NULL)
+    if (root == nullptr)
     {
       // Выделяем память для root
       root = new BTreeNode(t, true);
@@ -457,7 +457,7 @@ namespace itis {
 
     // Если ключ здесь не найден и это листовой узел
     if (leaf == true)
-      return NULL;
+      return nullptr;
 
     // Переходим к соответствующему потомку
     return C[i]->search(k);
@@ -475,12 +475,12 @@ namespace itis {
     root->remove(k);
 
     // Если у корневого узла 0 ключей, сделаем его первого потомка новым корнем
-    // если у него есть потомок, иначе установить root как NULL
+    // если у него есть потомок, иначе установить root как nullptr
     if (root->n==0)
     {
       BTreeNode *tmp = root;
       if (root->leaf)
-        root = NULL;
+        root = nullptr;
       else
         root = root->C[0];
 

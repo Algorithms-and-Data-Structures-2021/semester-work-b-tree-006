@@ -10,7 +10,7 @@ using namespace std;
 
 
 // Определите путь до проекта
-const string path_to_project = "C:\\Users\\username\\acd-projects\\semester-work-b-tree-006";
+const string path_to_project = "C:\\Users\\4aspe\\Desktop\\working\\semester-work-b-tree-006";
 
 // Максимальное значение элементов генерации
 const int max_rand = 5000;

@@ -34,8 +34,8 @@ target_compile_definitions(project_paths INTERFACE
 # Это самое главное, что вы должны реализовать в рамках семестрового проекта.
 
 add_library(semester_work_b-tree-006 STATIC
-        src/data_structure.cpp
-        include/data_structure.hpp)
+        src/btree.cpp
+        include/btree.hpp)
 
 # включить предупреждения компилятора для библиотеки (линковка)
 target_link_libraries(semester_work_b-tree-006 PRIVATE project_warnings)

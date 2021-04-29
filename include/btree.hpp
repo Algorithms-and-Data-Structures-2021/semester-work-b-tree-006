@@ -18,7 +18,7 @@ namespace itis {
     void traverse();
 
     // Функция для поиска ключа
-    BTreeNode *search(int k);  // возвращает NULL, если k отсутствует.
+    BTreeNode *search(int k);  // возвращает nullptr, если k отсутствует.
 
     // Функция, которая возвращает индекс первого ключа, который больше
     // или равен k
@@ -85,19 +85,19 @@ namespace itis {
     // Конструктор (Инициализирует дерево как пустое)
     BTree(int _t)
     {
-      root = NULL;
+      root = nullptr;
       t = _t;
     }
 
     void traverse()
     {
-      if (root != NULL) root->traverse();
+      if (root != nullptr) root->traverse();
     }
 
     // функция для поиска ключа в этом дереве
     BTreeNode* search(int k)
     {
-      return (root == NULL)? NULL : root->search(k);
+      return (root == nullptr)? nullptr : root->search(k);
     }
 
     // Основная функция, которая вставляет новый ключ в это B-дерево
